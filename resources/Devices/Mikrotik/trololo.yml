@@ -1,0 +1,25 @@
+description: 'null'
+id: 878941588584
+interfaces:
+  ether1:
+    ip: 172.16.32.1
+    mac: c1:a3:43:da:dc:21
+    mask: 255.255.255.0
+    name: ether1
+    type: ethernet
+  loopback:
+    ip: 172.21.32.1
+    mac: ff:ff:ff:ff:ff:ff
+    mask: 255.255.255.0
+    name: loopback
+    type: loopback
+model: 'null'
+name: trololo
+password: admin
+tools:
+  ssh:
+    description: SSH connect
+    id: 507459343172
+    name: ssh
+user: admin
+vendor: Mikrotik
