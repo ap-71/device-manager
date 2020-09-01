@@ -1,5 +1,5 @@
 description: 'null'
-id: 878941588584
+id: 562479058172
 interfaces:
   ether1:
     ip: 172.16.32.1
@@ -17,9 +17,16 @@ model: 'null'
 name: trololo
 password: admin
 tools:
+  snmp:
+    OIDs:
+      name: 1.0.8802.1.1.2.1.3.3.0
+    community: public
+    description: Simple Network Management Protocol
+    id: 910425436162
+    name: snmp
   ssh:
     description: SSH connect
-    id: 507459343172
+    id: 516830245959
     name: ssh
 user: admin
 vendor: Mikrotik
