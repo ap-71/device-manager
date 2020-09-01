@@ -13,7 +13,7 @@ class Device:
     user: str
     password: str
 
-    def __init__(self, id_dev=None, interfaces: list = None, ip_loopback=None, name='null', vendor='null', model='null',
+    def __init__(self, id_dev=None, interfaces: list = None, ip=None, name='null', vendor='null', model='null',
                  description='null',
                  tool=None, user_name=None, password=None):
         self.name = name
@@ -29,7 +29,7 @@ class Device:
             for interface in interfaces:
                 self.interfaces.add_interface(interface)
         else:
-            self.interfaces.add_interface(Loopback(ip_loopback if ip_loopback is not None else '127.0.0.1'))
+            self.interfaces.add_interface(Loopback(ip if ip is not None else '127.0.0.1'))
         if tool is not None:
             self.tools.add_tool(tool)
 
