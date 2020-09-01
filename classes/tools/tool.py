@@ -16,7 +16,7 @@ class Tool(ABC):
         self.id = id_tool if id_tool is not None else GenID().gen()
 
     @abstractmethod
-    def set_params(self, device):
+    def set_params(self):
         pass
 
     @abstractmethod
