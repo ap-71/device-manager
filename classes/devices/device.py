@@ -42,7 +42,6 @@ class Device:
         for key, interface in self.interfaces.__dict__.items():
             if key[0] != '_':
                 interfaces.update({key: {attr: val for attr, val in interface.__dict__.items()}})
-                #interfaces[key].update({attr: val for attr, val in interface.__dict__.items()})
         for key, tool in self.tools.__dict__.items():
             if key[0] != '_':
                 tools.update({key: {}})

@@ -33,7 +33,7 @@ class DeviceRegistryService:
                 for dev in _file:
                     with open(os.path.join(_dir, dev)) as file:
                         _device = yaml.safe_load(file.read())
-                        if _device.get('name', None) == name:
+                        if _device is not None and _device.get('name') == name:
                             return self.skeleton(_device)
 
     def add_device(self, device) -> bool:
@@ -53,7 +53,7 @@ class DeviceRegistryService:
         path_device = os.path.join(path_dir, f'{device.name}.yml')
         if os.path.exists(path_device):
             with open(path_device, 'w') as f:
-                f.write(yaml.dump(device.skeleton, sort_keys=True))
+                f.write(yaml.dump(device.skeleton))
                 return True
         return False
 

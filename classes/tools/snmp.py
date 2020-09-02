@@ -38,7 +38,6 @@ class Snmp(Tool):
         self.OIDs.update({name: oid})
 
 
-
 def snmp_bulk_cmd(community, ip, port, oid):
     return (bulkCmd(SnmpEngine(),
                     CommunityData(community, mpModel=0),
